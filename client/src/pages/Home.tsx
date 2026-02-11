@@ -254,6 +254,7 @@ export default function Home() {
         <div className="container mx-auto">
           <p>© {new Date().getFullYear()} Global Dev Collective. All rights reserved.</p>
         </div>
-      </footer/div>
+      </footer>
+    </div>
   );
 }
