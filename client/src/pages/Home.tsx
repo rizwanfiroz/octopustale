@@ -7,6 +7,8 @@ import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2, Globe2, Palette, Zap } from "lucide-react";
 import globalReachVideo from "@/assets/videos/global-reach.mp4";
 
+import teamCollaboration from "@/assets/images/team-collaboration.png";
+
 export default function Home() {
   const { data: projects, isLoading, error } = useProjects();
 
@@ -185,8 +187,8 @@ export default function Home() {
                 className="relative"
               >
                 <img 
-                  src="https://images.unsplash.com/photo-1522071823991-b9671f30c46f?w=800&q=80" 
-                  alt="Global Team" 
+                  src={teamCollaboration} 
+                  alt="Global Team Collaboration" 
                   className="rounded-2xl shadow-2xl"
                 />
                 <div className="absolute -bottom-6 -right-6 bg-black text-white p-6 rounded-xl shadow-xl hidden md:block">
