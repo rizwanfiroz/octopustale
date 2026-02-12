@@ -13,18 +13,23 @@ export default function Home() {
   const services = [
     {
       icon: <Palette className="w-8 h-8 text-accent" />,
-      title: "Custom Software",
-      description: "Tailored solutions built from the ground up to solve your unique business challenges.",
+      title: "Product Engineering",
+      description: "Full-stack development for iOS, Android, and modern Web. We build scalable, high-performance applications from MVP to Enterprise.",
     },
     {
       icon: <Globe2 className="w-8 h-8 text-blue-500" />,
-      title: "Global Scalability",
-      description: "Architecture designed to support users worldwide with low latency and high availability.",
+      title: "Enterprise Modernization & ERP",
+      description: "We build custom ERP modules and integrate seamlessly with your existing stack (SAP, Salesforce, Oracle). We modernize legacy architectures without disrupting operations.",
     },
     {
       icon: <Zap className="w-8 h-8 text-yellow-500" />,
-      title: "Rapid Innovation",
-      description: "Agile methodologies that turn ideas into production-ready software in record time.",
+      title: "Cloud & DevOps Architecture",
+      description: "We design self-healing infrastructure that scales automatically. CI/CD pipelines included so you can ship daily without breaking things.",
+    },
+    {
+      icon: <ArrowRight className="w-8 h-8 text-purple-500" />,
+      title: "Data, AI & Automation",
+      description: "We build predictive dashboards and automate repetitive workflows using smart algorithms and AI integration.",
     },
   ];
 
@@ -93,7 +98,7 @@ export default function Home() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: index * 0.2 }}
+                  transition={{ delay: index * 0.1 }}
                   className="p-8 rounded-2xl bg-zinc-900 border border-white/5 hover:border-white/10 transition-colors group"
                 >
                   <div className="mb-6 p-3 bg-white/5 w-fit rounded-xl group-hover:scale-110 transition-transform duration-300">
@@ -232,7 +237,7 @@ export default function Home() {
               <div className="space-y-8">
                 <div>
                   <h4 className="text-sm font-bold uppercase tracking-widest text-zinc-500 mb-2">Inquiries</h4>
-                  <a href="mailto:build@global.dev" className="text-2xl font-display hover:text-accent transition-colors">build@global.dev</a>
+                  <a href="mailto:hello@octopustale.com" className="text-2xl font-display hover:text-accent transition-colors">hello@octopustale.com</a>
                 </div>
                 <div>
                   <h4 className="text-sm font-bold uppercase tracking-widest text-zinc-500 mb-2">Socials</h4>
@@ -252,7 +257,7 @@ export default function Home() {
 
       <footer className="py-8 border-t border-white/10 text-center text-zinc-500 text-sm">
         <div className="container mx-auto">
-          <p>© {new Date().getFullYear()} Global Dev Collective. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} OctopusTale. All rights reserved.</p>
         </div>
       </footer>
     </div>

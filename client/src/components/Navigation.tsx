@@ -32,7 +32,7 @@ export default function Navigation() {
       >
         <div className="container mx-auto px-6 flex items-center justify-between">
           <Link href="/" className="text-2xl font-bold font-display tracking-tighter hover:opacity-80 transition-opacity">
-            AESTHET<span className="text-accent">.</span>ICS
+            OCTOPUSTALE<span className="text-accent">.</span>
           </Link>
 
           {/* Desktop Nav */}
