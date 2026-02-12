@@ -4,7 +4,16 @@ import ProjectCard from "@/components/ProjectCard";
 import ContactForm from "@/components/ContactForm";
 import { useProjects } from "@/hooks/use-projects";
 import { motion } from "framer-motion";
-import { ArrowRight, CheckCircle2, Globe2, Palette, Zap, Layers, Cpu, Database } from "lucide-react";
+import {
+  ArrowRight,
+  CheckCircle2,
+  Globe2,
+  Palette,
+  Zap,
+  Layers,
+  Cpu,
+  Database,
+} from "lucide-react";
 import globalReachVideo from "@/assets/videos/global-reach.mp4";
 
 export default function Home() {
@@ -14,65 +23,80 @@ export default function Home() {
     {
       icon: <Layers className="w-8 h-8 text-blue-500" />,
       title: "Product Engineering",
-      description: "Full-stack development for iOS, Android, and modern Web. We build scalable, high-performance applications from MVP to Enterprise.",
+      description:
+        "Full-stack development for iOS, Android, and modern Web. We build scalable, high-performance applications from MVP to Enterprise.",
     },
     {
       icon: <Cpu className="w-8 h-8 text-purple-500" />,
       title: "Enterprise Modernization & ERP",
-      description: "We build custom ERP modules and integrate seamlessly with your existing stack (SAP, Salesforce, Oracle). We modernize legacy architectures without disrupting operations.",
+      description:
+        "We build custom ERP modules and integrate seamlessly with your existing stack (SAP, Salesforce, Oracle). We modernize legacy architectures without disrupting operations.",
     },
     {
       icon: <Zap className="w-8 h-8 text-blue-400" />,
       title: "Cloud & DevOps Architecture",
-      description: "We design self-healing infrastructure that scales automatically. CI/CD pipelines included so you can ship daily without breaking things.",
+      description:
+        "We design self-healing infrastructure that scales automatically. CI/CD pipelines included so you can ship daily without breaking things.",
     },
     {
       icon: <Database className="w-8 h-8 text-purple-400" />,
       title: "Data, AI & Automation",
-      description: "We build predictive dashboards and automate repetitive workflows using smart algorithms and AI integration.",
+      description:
+        "We build predictive dashboards and automate repetitive workflows using smart algorithms and AI integration.",
     },
   ];
 
   // Fallback/Demo Data if API is empty
-  const displayProjects = projects && projects.length > 0 ? projects : [
-    {
-      id: 1,
-      title: "Global FinTech Hub",
-      description: "A secure, cross-border payment platform serving millions of users.",
-      imageUrl: "https://images.unsplash.com/photo-1551288049-bbdac8626ad1?w=800&q=80",
-      category: "FinTech",
-      createdAt: new Date(),
-    },
-    {
-      id: 2,
-      title: "AI Logistics Engine",
-      description: "Real-time supply chain optimization for international shipping.",
-      imageUrl: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80",
-      category: "AI/ML",
-      createdAt: new Date(),
-    },
-    {
-      id: 3,
-      title: "HealthConnect Global",
-      description: "Telemedicine platform connecting doctors and patients across continents.",
-      imageUrl: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80",
-      category: "HealthTech",
-      createdAt: new Date(),
-    },
-    {
-      id: 4,
-      title: "Smart City Grid",
-      description: "IoT infrastructure management for modern urban environments.",
-      imageUrl: "https://images.unsplash.com/photo-1573164713988-8665fc963095?w=800&q=80",
-      category: "IoT",
-      createdAt: new Date(),
-    }
-  ];
+  const displayProjects =
+    projects && projects.length > 0
+      ? projects
+      : [
+          {
+            id: 1,
+            title: "Global FinTech Hub",
+            description:
+              "A secure, cross-border payment platform serving millions of users.",
+            imageUrl:
+              "https://images.unsplash.com/photo-1551288049-bbdac8626ad1?w=800&q=80",
+            category: "FinTech",
+            createdAt: new Date(),
+          },
+          {
+            id: 2,
+            title: "AI Logistics Engine",
+            description:
+              "Real-time supply chain optimization for international shipping.",
+            imageUrl:
+              "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80",
+            category: "AI/ML",
+            createdAt: new Date(),
+          },
+          {
+            id: 3,
+            title: "HealthConnect Global",
+            description:
+              "Telemedicine platform connecting doctors and patients across continents.",
+            imageUrl:
+              "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80",
+            category: "HealthTech",
+            createdAt: new Date(),
+          },
+          {
+            id: 4,
+            title: "Smart City Grid",
+            description:
+              "IoT infrastructure management for modern urban environments.",
+            imageUrl:
+              "https://images.unsplash.com/photo-1573164713988-8665fc963095?w=800&q=80",
+            category: "IoT",
+            createdAt: new Date(),
+          },
+        ];
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <Navigation />
-      
+
       <Hero />
 
       {/* Services Section */}
@@ -80,15 +104,19 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div className="md:col-span-1">
-              <span className="text-accent uppercase tracking-widest text-sm font-bold mb-4 block">Our Expertise</span>
+              <span className="text-accent uppercase tracking-widest text-sm font-bold mb-4 block">
+                Our Expertise
+              </span>
               <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
                 Software that <br /> Scales the World.
               </h2>
               <p className="text-zinc-400 leading-relaxed mb-8">
-                We combine deep technical expertise with global perspective to build software that defines industries.
+                We combine deep technical expertise with global perspective to
+                build software that defines industries.
               </p>
               <button className="flex items-center gap-2 text-white font-bold hover:text-accent transition-colors group">
-                Explore Services <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+                Explore Services{" "}
+                <ArrowRight className="group-hover:translate-x-1 transition-transform" />
               </button>
             </div>
             <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -105,7 +133,9 @@ export default function Home() {
                     {service.icon}
                   </div>
                   <h3 className="text-xl font-bold mb-3">{service.title}</h3>
-                  <p className="text-zinc-400 text-sm leading-relaxed">{service.description}</p>
+                  <p className="text-zinc-400 text-sm leading-relaxed">
+                    {service.description}
+                  </p>
                 </motion.div>
               ))}
             </div>
@@ -115,10 +145,10 @@ export default function Home() {
 
       {/* Global Reach Video Section */}
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
-        <video 
-          autoPlay 
-          loop 
-          muted 
+        <video
+          autoPlay
+          loop
+          muted
           playsInline
           className="absolute w-full h-full object-cover opacity-50"
         >
@@ -126,7 +156,7 @@ export default function Home() {
         </video>
         <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
         <div className="container mx-auto px-6 relative z-10 text-center">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -135,7 +165,8 @@ export default function Home() {
             Engineering Without Borders.
           </motion.h2>
           <p className="text-xl text-zinc-300 max-w-2xl mx-auto">
-            From Silicon Valley to Singapore, we partner with visionary companies to deliver world-class digital products.
+            From Silicon Valley to Singapore, we partner with visionary
+            companies to deliver world-class digital products.
           </p>
         </div>
       </section>
@@ -145,24 +176,36 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="flex justify-between items-end mb-16">
             <div>
-              <span className="text-blue-500 uppercase tracking-widest text-sm font-bold mb-4 block">Case Studies</span>
-              <h2 className="text-5xl md:text-7xl font-display font-bold">Global Impact</h2>
+              <span className="text-blue-500 uppercase tracking-widest text-sm font-bold mb-4 block">
+                Case Studies
+              </span>
+              <h2 className="text-5xl md:text-7xl font-display font-bold">
+                Global Impact
+              </h2>
             </div>
             <div className="hidden md:block">
               <p className="text-right text-zinc-500 max-w-xs text-sm">
-                A selection of high-impact software solutions we've delivered for international clients.
+                A selection of high-impact software solutions we've delivered
+                for international clients.
               </p>
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-16">
             {isLoading ? (
-              <div className="col-span-2 text-center py-20 text-zinc-500">Loading projects...</div>
+              <div className="col-span-2 text-center py-20 text-zinc-500">
+                Loading projects...
+              </div>
             ) : error ? (
-              <div className="col-span-2 text-center py-20 text-red-500">Error loading projects.</div>
+              <div className="col-span-2 text-center py-20 text-red-500">
+                Error loading projects.
+              </div>
             ) : (
               displayProjects.map((project, idx) => (
-                <div key={project.id} className={idx % 2 === 1 ? "md:mt-24" : ""}>
+                <div
+                  key={project.id}
+                  className={idx % 2 === 1 ? "md:mt-24" : ""}
+                >
                   <ProjectCard project={project} index={idx} />
                 </div>
               ))
@@ -170,7 +213,7 @@ export default function Home() {
           </div>
 
           <div className="mt-24 flex justify-center">
-            <button className="px-10 py-4 border border-blue-500/30 bg-blue-500/5 backdrop-blur-sm text-blue-400 font-bold rounded-full hover:bg-blue-500 hover:text-white transition-all duration-300">
+            <button className="px-8 py-4 bg-white text-black font-bold rounded-full hover:bg-accent hover:text-white transition-all duration-300 transform hover:-translate-y-1">
               View Our Full Portfolio
             </button>
           </div>
@@ -178,20 +221,36 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-24 bg-zinc-950 text-white relative overflow-hidden">
+      <section
+        id="about"
+        className="py-24 bg-zinc-950 text-white relative overflow-hidden"
+      >
         <div className="absolute top-0 right-0 w-1/3 h-full bg-zinc-900/50 skew-x-12 translate-x-20 z-0" />
-        
+
         <div className="container mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-5xl md:text-6xl font-display font-bold mb-6">Your Global<br />Tech Partner.</h2>
+              <h2 className="text-5xl md:text-6xl font-display font-bold mb-6">
+                Your Global
+                <br />
+                Tech Partner.
+              </h2>
               <p className="text-zinc-400 text-lg mb-8 leading-relaxed max-w-lg">
-                We are a distributed team of engineers, designers, and strategists. We don't just build software; we build the future of global commerce and communication.
+                We are a distributed team of engineers, designers, and
+                strategists. We don't just build software; we build the future
+                of global commerce and communication.
               </p>
-              
+
               <ul className="space-y-4 mb-10">
-                {["24/7 Global Support", "Elite Engineering Talent", "Scalable Enterprise Solutions"].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 font-medium text-zinc-300">
+                {[
+                  "24/7 Global Support",
+                  "Elite Engineering Talent",
+                  "Scalable Enterprise Solutions",
+                ].map((item, i) => (
+                  <li
+                    key={i}
+                    className="flex items-center gap-3 font-medium text-zinc-300"
+                  >
                     <CheckCircle2 className="text-blue-500 w-5 h-5" /> {item}
                   </li>
                 ))}
@@ -201,16 +260,24 @@ export default function Home() {
                 Our Story
               </button>
             </div>
-            
+
             <div className="hidden md:block">
               <div className="grid grid-cols-2 gap-4">
                 <div className="p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
-                  <div className="text-4xl font-display font-bold text-blue-500 mb-2">50+</div>
-                  <div className="text-sm text-zinc-400 font-medium">Countries Reached</div>
+                  <div className="text-4xl font-display font-bold text-blue-500 mb-2">
+                    50+
+                  </div>
+                  <div className="text-sm text-zinc-400 font-medium">
+                    Countries Reached
+                  </div>
                 </div>
                 <div className="p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm mt-8">
-                  <div className="text-4xl font-display font-bold text-purple-500 mb-2">100+</div>
-                  <div className="text-sm text-zinc-400 font-medium">Projects Delivered</div>
+                  <div className="text-4xl font-display font-bold text-purple-500 mb-2">
+                    100+
+                  </div>
+                  <div className="text-sm text-zinc-400 font-medium">
+                    Projects Delivered
+                  </div>
                 </div>
               </div>
             </div>
@@ -228,23 +295,43 @@ export default function Home() {
             <div>
               <h2 className="text-5xl md:text-7xl font-display font-bold mb-8">
                 Build for the <br />
-                <span className="text-zinc-500">Entire Planet.</span>
+                <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">
+                  Entire Planet.
+                </span>
               </h2>
               <p className="text-xl text-zinc-400 mb-12 max-w-md">
-                Ready to scale your idea globally? Let's talk about how we can help you build the next big thing.
+                Ready to scale your idea globally? Let's talk about how we can
+                help you build the next big thing.
               </p>
 
               <div className="space-y-8">
                 <div>
-                  <h4 className="text-sm font-bold uppercase tracking-widest text-zinc-500 mb-2">Inquiries</h4>
-                  <a href="mailto:hello@octopustale.com" className="text-2xl font-display hover:text-accent transition-colors">hello@octopustale.com</a>
+                  <h4 className="text-sm font-bold uppercase tracking-widest text-zinc-500 mb-2">
+                    Inquiries
+                  </h4>
+                  <a
+                    href="mailto:hello@octopustale.com"
+                    className="text-2xl font-display hover:text-accent transition-colors"
+                  >
+                    hello@octopustale.com
+                  </a>
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold uppercase tracking-widest text-zinc-500 mb-2">Socials</h4>
+                  <h4 className="text-sm font-bold uppercase tracking-widest text-zinc-500 mb-2">
+                    Socials
+                  </h4>
                   <div className="flex gap-4">
-                    {["LinkedIn", "GitHub", "Twitter", "Medium"].map((social) => (
-                      <a key={social} href="#" className="hover:text-accent transition-colors">{social}</a>
-                    ))}
+                    {["LinkedIn", "GitHub", "Twitter", "Medium"].map(
+                      (social) => (
+                        <a
+                          key={social}
+                          href="#"
+                          className="hover:text-accent transition-colors"
+                        >
+                          {social}
+                        </a>
+                      ),
+                    )}
                   </div>
                 </div>
               </div>
