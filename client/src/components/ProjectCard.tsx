@@ -16,16 +16,16 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       transition={{ duration: 0.6, delay: index * 0.1 }}
       className="group relative cursor-pointer"
     >
-      <div className="relative aspect-[4/5] overflow-hidden rounded-lg bg-zinc-900">
+      <div className="relative aspect-[4/3] lg:aspect-[16/10] overflow-hidden rounded-lg bg-zinc-900">
         {/* Placeholder gradient if image fails or for loading */}
         <div className="absolute inset-0 bg-gradient-to-br from-zinc-800 to-zinc-950" />
-        
+
         <img
           src={project.imageUrl}
           alt={project.title}
           className="object-cover w-full h-full transition-transform duration-700 ease-out group-hover:scale-110"
         />
-        
+
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-[2px]">
           <div className="w-16 h-16 rounded-full bg-white text-black flex items-center justify-center transform scale-50 group-hover:scale-100 transition-transform duration-300 delay-75">
