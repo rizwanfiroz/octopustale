@@ -41,14 +41,14 @@ export default function Navigation() {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-sm font-medium hover:text-accent transition-colors relative group"
+                className="text-sm font-medium hover:text-blue-400 transition-colors relative group"
               >
                 {link.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full" />
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full" />
               </a>
             ))}
             <button 
-              className="bg-white text-black px-6 py-2 rounded-full font-bold text-sm hover:bg-accent hover:text-white transition-all duration-300 hover:scale-105"
+              className="bg-white text-black px-6 py-2 rounded-full font-bold text-sm hover:bg-blue-500 hover:text-white transition-all duration-300 hover:scale-105"
               onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
             >
               Let's Talk
@@ -57,7 +57,7 @@ export default function Navigation() {
 
           {/* Mobile Toggle */}
           <button
-            className="md:hidden text-foreground hover:text-accent transition-colors"
+            className="md:hidden text-foreground hover:text-blue-400 transition-colors"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -78,14 +78,14 @@ export default function Navigation() {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-4xl font-display font-bold hover:text-accent transition-colors"
+                className="text-4xl font-display font-bold hover:text-blue-400 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 {link.name}
               </a>
             ))}
             <button 
-              className="mt-8 bg-accent px-8 py-3 rounded-full font-bold text-lg"
+              className="mt-8 bg-blue-600 px-8 py-3 rounded-full font-bold text-lg text-white"
               onClick={() => {
                 setIsOpen(false);
                 document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });

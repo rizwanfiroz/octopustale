@@ -4,32 +4,30 @@ import ProjectCard from "@/components/ProjectCard";
 import ContactForm from "@/components/ContactForm";
 import { useProjects } from "@/hooks/use-projects";
 import { motion } from "framer-motion";
-import { ArrowRight, CheckCircle2, Globe2, Palette, Zap } from "lucide-react";
+import { ArrowRight, CheckCircle2, Globe2, Palette, Zap, Layers, Cpu, Database } from "lucide-react";
 import globalReachVideo from "@/assets/videos/global-reach.mp4";
-
-import teamCollaboration from "@/assets/images/team-collaboration.png";
 
 export default function Home() {
   const { data: projects, isLoading, error } = useProjects();
 
   const services = [
     {
-      icon: <Palette className="w-8 h-8 text-accent" />,
+      icon: <Layers className="w-8 h-8 text-blue-500" />,
       title: "Product Engineering",
       description: "Full-stack development for iOS, Android, and modern Web. We build scalable, high-performance applications from MVP to Enterprise.",
     },
     {
-      icon: <Globe2 className="w-8 h-8 text-blue-500" />,
+      icon: <Cpu className="w-8 h-8 text-purple-500" />,
       title: "Enterprise Modernization & ERP",
       description: "We build custom ERP modules and integrate seamlessly with your existing stack (SAP, Salesforce, Oracle). We modernize legacy architectures without disrupting operations.",
     },
     {
-      icon: <Zap className="w-8 h-8 text-yellow-500" />,
+      icon: <Zap className="w-8 h-8 text-blue-400" />,
       title: "Cloud & DevOps Architecture",
       description: "We design self-healing infrastructure that scales automatically. CI/CD pipelines included so you can ship daily without breaking things.",
     },
     {
-      icon: <ArrowRight className="w-8 h-8 text-purple-500" />,
+      icon: <Database className="w-8 h-8 text-purple-400" />,
       title: "Data, AI & Automation",
       description: "We build predictive dashboards and automate repetitive workflows using smart algorithms and AI integration.",
     },
@@ -147,7 +145,7 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="flex justify-between items-end mb-16">
             <div>
-              <span className="text-accent uppercase tracking-widest text-sm font-bold mb-4 block">Case Studies</span>
+              <span className="text-blue-500 uppercase tracking-widest text-sm font-bold mb-4 block">Case Studies</span>
               <h2 className="text-5xl md:text-7xl font-display font-bold">Global Impact</h2>
             </div>
             <div className="hidden md:block">
@@ -170,51 +168,51 @@ export default function Home() {
               ))
             )}
           </div>
+
+          <div className="mt-24 flex justify-center">
+            <button className="px-10 py-4 border border-blue-500/30 bg-blue-500/5 backdrop-blur-sm text-blue-400 font-bold rounded-full hover:bg-blue-500 hover:text-white transition-all duration-300">
+              View Our Full Portfolio
+            </button>
+          </div>
         </div>
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-24 bg-white text-black relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-zinc-100 skew-x-12 translate-x-20 z-0" />
+      <section id="about" className="py-24 bg-zinc-950 text-white relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-zinc-900/50 skew-x-12 translate-x-20 z-0" />
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div>
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                className="relative"
-              >
-                <img 
-                  src={teamCollaboration} 
-                  alt="Global Team Collaboration" 
-                  className="rounded-2xl shadow-2xl"
-                />
-                <div className="absolute -bottom-6 -right-6 bg-black text-white p-6 rounded-xl shadow-xl hidden md:block">
-                  <div className="text-4xl font-display font-bold text-accent">50+</div>
-                  <div className="text-sm font-medium">Countries Reached</div>
-                </div>
-              </motion.div>
-            </div>
-            
-            <div>
-              <h2 className="text-5xl font-display font-bold mb-6">Your Global<br />Tech Partner.</h2>
-              <p className="text-zinc-600 text-lg mb-8 leading-relaxed">
+              <h2 className="text-5xl md:text-6xl font-display font-bold mb-6">Your Global<br />Tech Partner.</h2>
+              <p className="text-zinc-400 text-lg mb-8 leading-relaxed max-w-lg">
                 We are a distributed team of engineers, designers, and strategists. We don't just build software; we build the future of global commerce and communication.
               </p>
               
-              <ul className="space-y-4 mb-8">
+              <ul className="space-y-4 mb-10">
                 {["24/7 Global Support", "Elite Engineering Talent", "Scalable Enterprise Solutions"].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 font-medium">
-                    <CheckCircle2 className="text-accent w-5 h-5" /> {item}
+                  <li key={i} className="flex items-center gap-3 font-medium text-zinc-300">
+                    <CheckCircle2 className="text-blue-500 w-5 h-5" /> {item}
                   </li>
                 ))}
               </ul>
 
-              <button className="px-8 py-3 bg-black text-white rounded-full font-bold hover:bg-zinc-800 transition-colors">
+              <button className="px-8 py-3 bg-white text-black rounded-full font-bold hover:bg-blue-500 hover:text-white transition-all duration-300">
                 Our Story
               </button>
+            </div>
+            
+            <div className="hidden md:block">
+              <div className="grid grid-cols-2 gap-4">
+                <div className="p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
+                  <div className="text-4xl font-display font-bold text-blue-500 mb-2">50+</div>
+                  <div className="text-sm text-zinc-400 font-medium">Countries Reached</div>
+                </div>
+                <div className="p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm mt-8">
+                  <div className="text-4xl font-display font-bold text-purple-500 mb-2">100+</div>
+                  <div className="text-sm text-zinc-400 font-medium">Projects Delivered</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

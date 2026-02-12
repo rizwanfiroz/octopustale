@@ -27,8 +27,8 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
         />
 
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-[2px]">
-          <div className="w-16 h-16 rounded-full bg-white text-black flex items-center justify-center transform scale-50 group-hover:scale-100 transition-transform duration-300 delay-75">
+        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center backdrop-blur-[1px] group-hover:backdrop-blur-[2px]">
+          <div className="w-16 h-16 rounded-full bg-white text-black flex items-center justify-center transform scale-50 group-hover:scale-100 opacity-0 group-hover:opacity-100 transition-all duration-300 delay-75">
             <ArrowUpRight size={32} />
           </div>
         </div>

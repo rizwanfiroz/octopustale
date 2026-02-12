@@ -1,18 +1,22 @@
 import { motion } from "framer-motion";
-import heroBg from "@/assets/images/hero-bg.png";
+import heroFluidVideo from "@/assets/videos/hero-fluid.mp4";
 
 export default function Hero() {
   return (
     <section className="relative h-screen w-full overflow-hidden flex items-center justify-center">
-      {/* Image Background */}
+      {/* Video Background */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-black/70 z-10" />{" "}
+        <div className="absolute inset-0 bg-black/50 z-10" />{" "}
         {/* Overlay for readability */}
-        <img
-          src={heroBg}
-          alt="Modern tech office"
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
           className="w-full h-full object-cover"
-        />
+        >
+          <source src={heroFluidVideo} type="video/mp4" />
+        </video>
       </div>
 
       {/* Content */}
@@ -22,7 +26,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <h1 className="font-display font-extrabold tracking-tighter mb-8 leading-tight text-white text-[clamp(2.4rem,5.5vw,6rem)]">
+          <h1 className="font-display font-extrabold tracking-[0.03em] mb-8 leading-[1.05] text-white text-[clamp(2.4rem,5.5vw,6rem)]">
             <span className="block">BUILDING THE</span>
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400">
               WORLD'S CODE
